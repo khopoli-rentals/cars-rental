@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Rental</title>
+</head>
+<body>
+    <h1>Welcome to My Car Rental Service</h1>
+    <p>Rent the best cars at affordable prices.</p>
+
+    <h2>Available Cars</h2>
+    <ul>
+        <li>Wagonar</li>
+        <li>Honda City </li>
+        <li>Ertiga</li>
+    </ul>
+
+    <p>Contact us: carrental@email.com</p>
+</body>
+</html>
