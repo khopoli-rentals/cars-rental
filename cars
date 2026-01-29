@@ -2,29 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khopoli Cab Rental Services</title>
 
     <style>
+        /* Basic page styles */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
             background-color: #f4f4f4;
+            margin: 0;
         }
 
         h1 {
             color: #1e88e5;
+            margin-bottom: 10px;
         }
 
-        .contact {
+        .contact p {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin: 5px 0;
+        }
+
+        /* Car images container */
+        .cars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .cars img {
+            max-width: 100%;
             width: 300px;
-            margin: 10px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive text for small screens */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .contact p {
+                font-size: 16px;
+            }
+
+            .cars img {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -33,13 +62,13 @@
     <h1>Khopoli Cab Rental Services</h1>
 
     <div class="contact">
-        <p>📞 Contact Number: <strong>+917249794759</strong></p>
+        <p>📞 Contact Number: <strong>7249794759</strong></p>
         <p>📧 Email: <strong>khopolicab@gmail.com</strong></p>
     </div>
 
     <div class="cars">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Maruti_Ertiga_2018.jpg" alt="Maruti Ertiga">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Maruti_Suzuki_WagonR_2019.jpg" alt="Maruti WagonR">
+        <img src="images/ertiga.jpg" alt="Maruti Ertiga">
+        <img src="images/wagonr.jpg" alt="Maruti WagonR">
     </div>
 
 </body>
