@@ -1,19 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Car Rental</title>
+    <meta charset="UTF-8">
+    <title>Khopoli Cab Rental Services</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #1e88e5;
+        }
+
+        .contact {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .cars img {
+            width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Car Rental Service</h1>
-    <p>Rent the best cars at affordable prices.</p>
 
-    <h2>Available Cars</h2>
-    <ul>
-        <li>Wagonar</li>
-        <li>Honda City </li>
-        <li>Ertiga</li>
-    </ul>
+    <h1>Khopoli Cab Rental Services</h1>
 
-    <p>Contact us: carrental@email.com</p>
+    <div class="contact">
+        <p>📞 Contact Number: <strong>7249794759</strong></p>
+        <p>📧 Email: <strong>khopolicab@gmail.com</strong></p>
+    </div>
+
+    <div class="cars">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Maruti_Ertiga_2018.jpg" alt="Maruti Ertiga">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Maruti_Suzuki_WagonR_2019.jpg" alt="Maruti WagonR">
+    </div>
+
 </body>
 </html>
