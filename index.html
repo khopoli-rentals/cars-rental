@@ -21,7 +21,7 @@ header {
     margin-bottom: 30px;
 }
 
-/* BOXED TOP LINE */
+/* BOXED TOP LINE - SINGLE LINE */
 header h1 {
     font-size: 44px;
     font-weight: 900;
@@ -34,6 +34,8 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     text-align: center;
+    white-space: nowrap; /* Prevent line break */
+    overflow-x: auto;    /* Scroll if too long on small screens */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -236,6 +238,7 @@ header .services span:hover {
 @media (max-width: 500px) {
     header h1 {
         font-size: 28px;
+        padding: 15px 25px; /* smaller padding for small screens */
     }
     header .subtitle, header .tagline, header .services {
         font-size: 14px;
