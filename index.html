@@ -6,6 +6,7 @@
 <title>Khopoli Cab Rental Services</title>
 
 <style>
+/* GENERAL STYLES */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -32,6 +33,7 @@ h1 {
     display: inline-block;
 }
 
+/* CAR CARDS */
 .cars {
     display: flex;
     flex-wrap: wrap;
@@ -46,11 +48,12 @@ h1 {
     padding: 15px;
     max-width: 320px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .car-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.5);
 }
 
 .car-card img {
@@ -58,15 +61,21 @@ h1 {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.car-card:hover img {
+    transform: scale(1.05) rotate(2deg);
 }
 
 .car-card p {
     margin: 10px 0 0 0;
     font-size: 16px;
     color: #fff;
+    font-weight: bold;
 }
 
-/* WhatsApp Floating Button */
+/* WHATSAPP FLOATING BUTTON */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -79,9 +88,15 @@ h1 {
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     z-index: 999;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Elegant Footer */
+.whatsapp-float:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
 .footer {
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.05);
@@ -104,19 +119,27 @@ h1 {
     align-items: center;
 }
 
-.footer .info-card {
-    text-align: center;
-    transition: transform 0.3s;
+.footer .info-card a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.footer .info-card:hover {
-    transform: translateY(-5px);
+.footer .info-card a:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
 .footer .info-card img {
     width: 60px;
     height: 60px;
     margin-bottom: 12px;
+    transition: transform 0.3s;
+}
+
+.footer .info-card a:hover img {
+    transform: rotate(15deg) scale(1.1);
 }
 
 .footer p {
@@ -131,7 +154,7 @@ h1 {
     color: #f0f0f0;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 500px) {
     h1 {
         font-size: 24px;
@@ -181,20 +204,29 @@ h1 {
     </div>
 </div>
 
-<!-- Elegant Footer -->
+<!-- FOOTER -->
 <div class="footer">
     <h2>Khopoli Cab Services Available 24×7</h2>
 
     <div class="info-cards">
         <div class="info-card">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone">
-            <p>7249794759</p>
+            <a href="tel:7249794759">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone">
+                <p>7249794759</p>
+            </a>
         </div>
         <div class="info-card">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email">
-            <p>khopolicab@gmail.com</p>
+            <a href="mailto:khopolicab@gmail.com">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email">
+                <p>khopolicab@gmail.com</p>
+            </a>
         </div>
-     
+        <div class="info-card">
+            <a href="https://wa.me/917249794759" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+                <p>WhatsApp</p>
+            </a>
+        </div>
     </div>
 
     <p class="note">विश्वसनीय स्थानीय सेवा</p>
