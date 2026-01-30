@@ -16,34 +16,24 @@ body {
     color: #fff;
 }
 
+/* HEADER */
 header {
     margin-bottom: 30px;
 }
 
-/* HEADER STYLES */
-.main-title {
+header h1 {
     font-size: 42px;
     font-weight: bold;
-    background: linear-gradient(90deg, #00c6ff, #0072ff, #00c6ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 3s ease infinite;
+    color: #fff;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
-.subtitle {
+header .subtitle {
     font-size: 18px;
     color: #f0f0f0;
     margin-top: 8px;
     font-style: italic;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-}
-
-/* Gradient animation */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 /* CONTACT */
@@ -98,7 +88,7 @@ header {
     font-weight: bold;
 }
 
-/* BOOK NOW BUTTON (optional) */
+/* BOOK NOW BUTTON */
 .book-btn {
     display: inline-block;
     margin-top: 10px;
@@ -198,8 +188,11 @@ header {
 
 /* RESPONSIVE */
 @media (max-width: 500px) {
-    h1 {
-        font-size: 24px;
+    header h1 {
+        font-size: 28px;
+    }
+    header .subtitle {
+        font-size: 16px;
     }
     .contact {
         font-size: 16px;
@@ -223,7 +216,7 @@ header {
 <body>
 
 <header>
-    <h1 class="main-title">Khopoli Cab Rental Services</h1>
+    <h1>Khopoli Cab Rental Services</h1>
     <p class="subtitle">Reliable & Affordable Cab Service</p>
 </header>
 
