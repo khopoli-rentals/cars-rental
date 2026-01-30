@@ -100,7 +100,6 @@ header .marathi-tagline {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    position: relative;
 }
 
 .contact strong {
@@ -108,16 +107,8 @@ header .marathi-tagline {
 }
 
 .contact a {
-    color: black; /* WhatsApp inline icon remains visible */
+    color: black; /* clickable text black */
     text-decoration: none;
-}
-
-.contact .whatsapp-inline {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 26px;
 }
 
 /* VEHICLE INTRO TEXT */
@@ -199,21 +190,6 @@ header .marathi-tagline {
 .car-card:hover .book-btn {
     opacity: 1;
     transform: translateY(-4px);
-}
-
-/* WHATSAPP FLOATING BUTTON */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    border-radius: 50%;
-    padding: 16px;
-    font-size: 26px;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    z-index: 999;
 }
 
 /* FOOTER */
@@ -314,9 +290,8 @@ header .marathi-tagline {
 </header>
 
 <div class="contact">
-    <p style="color:black;">📞 Contact Number: <strong>7249794759</strong></p>
-    <p style="color:black;">📧 Email: <strong>khopolicab@gmail.com</strong></p>
-    <a href="https://wa.me/917249794759" target="_blank" class="whatsapp-inline">💬</a>
+    <p>📞 Contact Number: <strong><a href="tel:+917249794759">7249794759</a></strong></p>
+    <p>📧 Email: <strong><a href="mailto:khopolicab@gmail.com">khopolicab@gmail.com</a></strong></p>
 </div>
 
 <div class="vehicle-intro">
@@ -360,18 +335,10 @@ header .marathi-tagline {
                 <p>khopolicab@gmail.com</p>
             </a>
         </div>
-        <div class="info-card">
-            <a href="https://wa.me/917249794759" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
-                <p>WhatsApp</p>
-            </a>
-        </div>
     </div>
 
     <p class="note">Rated 5⭐️ | Serving You Since 20 Years | !! Professional and Reliable Service !!</p>
 </div>
-
-<a href="https://wa.me/917249794759" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
 </html>
