@@ -24,8 +24,8 @@ header {
 header h1 {
     font-size: 24px;
     font-weight: 900;
-    color: #000; /* Text black */
-    background: yellow; /* Background yellow */
+    color: #000; /* black text */
+    background: yellow; /* yellow background */
     padding: 10px 20px;
     border-radius: 20px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
@@ -54,31 +54,36 @@ header .subtitle {
 header .tagline {
     font-size: 18px;
     color: #000;
-    margin: 10px 0 0 0;
+    margin: 2px 0 20px 0; /* spacing below tagline */
     font-weight: 600;
     text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
 }
 
-/* SERVICES TABS */
 header .services {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.8;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 15px 0 0 0;
+    gap: 15px; /* space between tabs */
+    flex-wrap: wrap;
 }
 
 header .services span {
-    background: #fff;
+    background: rgba(255,255,255,0.2);
     color: #000;
     padding: 8px 12px;
     border-radius: 12px;
     font-weight: bold;
-    cursor: default;
-    transition: transform 0.3s, box-shadow 0.3s;
-    white-space: nowrap;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
 header .services span:hover {
+    background: #fff;
+    color: #000;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
@@ -86,35 +91,33 @@ header .services span:hover {
 /* CONTACT - CLICKABLE AND BIGGER */
 .contact {
     font-size: 24px;
-    margin-bottom: 5px; 
-    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    background: rgba(0,0,0,0.2);
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    color: #000; /* Black text for contact box */
 }
 .contact strong {
     font-size: 28px;
-    color: #000; /* Black strong text */
 }
 .contact a {
-    color: #000; /* Links black */
+    color: white;
     text-decoration: none;
 }
 
 /* VEHICLE INTRO TEXT */
 .vehicle-intro {
-    margin: 0 0 20px 0; 
+    margin: 0 0 20px 0;
     line-height: 1.1;
     color: #000;
 }
 
 .vehicle-intro h2 {
-    font-size: 24px; 
-    font-weight: 900; 
-    color: #000; 
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
     margin: 0;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .vehicle-intro p {
@@ -326,8 +329,7 @@ header .services span:hover {
 <div class="contact">
     <p>📞 Contact Number: <strong><a href="tel:+917249794759">7249794759</a></strong></p>
     <p>📧 Email: <strong><a href="mailto:khopolicab@gmail.com">khopolicab@gmail.com</a></strong></p>
-    <!-- WhatsApp Icon inside contact box -->
-    <p><a href="https://wa.me/917249794759" target="_blank" class="whatsapp-float" style="position:static; transform:none;">💬</a></p>
+    <a href="https://wa.me/917249794759" target="_blank" class="whatsapp-float" style="position:static;margin-top:10px;">💬</a>
 </div>
 
 <!-- VEHICLE INTRO TEXT -->
@@ -381,8 +383,11 @@ header .services span:hover {
         </div>
     </div>
 
-    <p class="note">⭐ Rated 5 Stars | Since 20 Years | Your Journey, Our Commitment 🍀</p>
+    <p class="note">⭐ Rated 5 Stars | Since 20 Years | Your Journey, Our Commitment</p>
 </div>
+
+<!-- WhatsApp Floating Icon -->
+<a href="https://wa.me/917249794759" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
 </html>
