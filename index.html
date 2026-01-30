@@ -63,11 +63,12 @@ header .tagline {
 
 /* SERVICES */
 header .services {
-    font-size: 18px; /* Slightly bigger */
+    font-size: 18px;
     margin-top: 12px;
+    margin-bottom: 0; /* removed extra space below services */
     font-style: normal;
     font-weight: 600;
-    line-height: 2;
+    line-height: 1.8; /* slightly tighter line spacing */
 }
 
 header .services span {
@@ -234,6 +235,15 @@ header .services span:hover {
     color: #f0f0f0;
 }
 
+/* TRUST NOTE */
+.footer p.trust-note {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #f0f0f0;
+    font-style: italic;
+    font-weight: 600;
+}
+
 /* RESPONSIVE */
 @media (max-width: 500px) {
     header h1 {
@@ -256,8 +266,8 @@ header .services span:hover {
         width: 50px;
         height: 50px;
     }
-    .footer p.note {
-        font-size: 16px;
+    .footer p.note, .footer p.trust-note {
+        font-size: 14px;
     }
 }
 </style>
@@ -266,7 +276,7 @@ header .services span:hover {
 
 <header>
     <h1>KHOPOLI Cab Rental Services</h1>
-    <p class="subtitle">!! विश्वसनीय आणि परवडणारी सेवा !!</p>
+    <p class="subtitle">विश्वसनीय आणि परवडणारी सेवा</p>
     <p class="tagline">Available 24×7 for All Your Travel Needs</p>
     <p class="services">
         <span>Airport Transfer</span>
@@ -326,8 +336,8 @@ header .services span:hover {
         </div>
     </div>
 
-    <p class="note">"Professional & Reliable Service " !!</p>
-  
+    <p class="note">विश्वसनीय स्थानीय सेवा</p>
+    <p class="trust-note">Professional and Reliable Service You Can Trust / पेशेवर और भरोसेमंद सेवा जिस पर आप विश्वास कर सकते हैं</p>
 </div>
 
 <!-- WhatsApp Floating Icon -->
