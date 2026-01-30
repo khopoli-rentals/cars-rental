@@ -21,18 +21,18 @@ header {
     margin-bottom: 30px;
 }
 
-/* BOXED TOP LINE - SINGLE LINE */
+/* BOXED TOP LINE - SINGLE LINE, RESPONSIVE FONT */
 header h1 {
-    font-size: 44px;
+    font-size: 32px; /* smaller than before */
     font-weight: 900;
     color: #000; /* Black text */
     background: rgba(255, 255, 255, 0.3); /* semi-transparent box */
-    padding: 20px 40px;
+    padding: 15px 30px;
     border-radius: 25px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.5);
     display: inline-block;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     text-align: center;
     white-space: nowrap; /* Prevent line break */
     overflow-x: auto;    /* Scroll if too long on small screens */
@@ -237,8 +237,8 @@ header .services span:hover {
 /* RESPONSIVE */
 @media (max-width: 500px) {
     header h1 {
-        font-size: 28px;
-        padding: 15px 25px; /* smaller padding for small screens */
+        font-size: 24px;  /* smaller for mobile */
+        padding: 10px 20px;
     }
     header .subtitle, header .tagline, header .services {
         font-size: 14px;
