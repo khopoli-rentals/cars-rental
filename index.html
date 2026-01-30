@@ -21,27 +21,27 @@ header {
     margin-bottom: 30px;
 }
 
-/* BOXED TOP LINE - SINGLE LINE, RESPONSIVE FONT */
+/* BOXED TOP LINE - SMALL & RESPONSIVE */
 header h1 {
-    font-size: 32px; /* smaller than before */
+    font-size: 24px; /* smaller font */
     font-weight: 900;
     color: #000; /* Black text */
     background: rgba(255, 255, 255, 0.3); /* semi-transparent box */
-    padding: 15px 30px;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    padding: 10px 20px; /* smaller padding */
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
     display: inline-block;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     text-align: center;
     white-space: nowrap; /* Prevent line break */
-    overflow-x: auto;    /* Scroll if too long on small screens */
+    overflow-x: auto;    /* Scroll if extremely narrow */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 header h1:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
 /* SUBTITLE & TAGLINE */
@@ -237,8 +237,8 @@ header .services span:hover {
 /* RESPONSIVE */
 @media (max-width: 500px) {
     header h1 {
-        font-size: 24px;  /* smaller for mobile */
-        padding: 10px 20px;
+        font-size: 18px;  /* very small on mobile */
+        padding: 8px 12px;
     }
     header .subtitle, header .tagline, header .services {
         font-size: 14px;
