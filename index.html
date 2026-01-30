@@ -21,17 +21,32 @@ header {
     margin-bottom: 30px;
 }
 
+/* BOXED TOP LINE */
 header h1 {
-    font-size: 42px;
+    font-size: 44px;
     font-weight: 900;
-    color: #000; /* Black title */
-    text-shadow: 2px 2px 6px rgba(255,255,255,0.3), 0 0 8px rgba(0,0,0,0.2);
+    color: #000; /* Black text */
+    background: rgba(255, 255, 255, 0.3); /* semi-transparent box */
+    padding: 20px 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+header h1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* SUBTITLE & TAGLINE */
 header .subtitle {
     font-size: 20px;
     color: #000; /* Black */
-    margin-top: 6px;
+    margin-top: 10px;
     font-style: italic;
     text-shadow: 1px 1px 6px rgba(255,255,255,0.2);
 }
@@ -44,6 +59,7 @@ header .tagline {
     text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
 }
 
+/* SERVICES */
 header .services {
     font-size: 18px; /* Slightly bigger */
     margin-top: 12px;
@@ -246,13 +262,13 @@ header .services span:hover {
 <body>
 
 <header>
-    <h1>Khopoli Cab Rental Services</h1>
-    <p class="subtitle">!! विश्वसनीय आणि परवडणारी सेवा !!</p>
+    <h1>KHOPOLI Cab Rental Services</h1>
+    <p class="subtitle">विश्वसनीय आणि परवडणारी सेवा</p>
     <p class="tagline">Available 24×7 for All Your Travel Needs</p>
     <p class="services">
         <span>Airport Transfer</span>
-        <span>One Way Cab Services</span>
         <span>Outstation Services</span>
+        <span>One Way Cab Services</span>
         <span>Corporate Services</span>
     </p>
 </header>
