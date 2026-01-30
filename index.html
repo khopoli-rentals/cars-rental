@@ -23,19 +23,19 @@ header {
 
 /* BOXED TOP LINE - SMALL & RESPONSIVE */
 header h1 {
-    font-size: 24px; /* smaller font */
+    font-size: 24px;
     font-weight: 900;
-    color: #000; /* Black text */
-    background: rgba(255, 255, 255, 0.3); /* semi-transparent box */
-    padding: 10px 20px; /* smaller padding */
+    color: #000;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
     border-radius: 20px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
-    white-space: nowrap; /* Prevent line break */
-    overflow-x: auto;    /* Scroll if extremely narrow */
+    white-space: nowrap;
+    overflow-x: auto;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -47,7 +47,7 @@ header h1:hover {
 /* SUBTITLE & TAGLINE */
 header .subtitle {
     font-size: 20px;
-    color: #000; /* Black */
+    color: #000;
     margin-top: 10px;
     font-style: italic;
     text-shadow: 1px 1px 6px rgba(255,255,255,0.2);
@@ -55,7 +55,7 @@ header .subtitle {
 
 header .tagline {
     font-size: 18px;
-    color: #000; /* Black */
+    color: #000;
     margin-top: 4px;
     font-weight: 600;
     text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
@@ -65,34 +65,37 @@ header .tagline {
 header .services {
     font-size: 18px;
     margin-top: 12px;
-    margin-bottom: 0; /* removed extra space below services */
+    margin-bottom: 0;
     font-style: normal;
     font-weight: 600;
-    line-height: 1.8; /* slightly tighter line spacing */
+    line-height: 1.8;
 }
 
 header .services span {
     display: block;
-    color: #000; /* Black */
+    color: #000;
     font-weight: bold;
     transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
     cursor: default;
 }
 
 header .services span:hover {
-    color: #444; /* Dark gray on hover */
+    color: #444;
     transform: translateX(6px);
     text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-/* CONTACT */
+/* CONTACT - INCREASED FONT */
 .contact {
-    font-size: 22px;
+    font-size: 24px; /* bigger base font */
     margin-bottom: 20px;
     background: rgba(0,0,0,0.2);
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     display: inline-block;
+}
+.contact strong {
+    font-size: 28px; /* actual number/email bigger */
 }
 
 /* CAR CARDS */
@@ -247,14 +250,17 @@ header .services span:hover {
 /* RESPONSIVE */
 @media (max-width: 500px) {
     header h1 {
-        font-size: 18px;  /* very small on mobile */
+        font-size: 18px;
         padding: 8px 12px;
     }
     header .subtitle, header .tagline, header .services {
         font-size: 14px;
     }
     .contact {
-        font-size: 16px;
+        font-size: 18px;
+    }
+    .contact strong {
+        font-size: 20px;
     }
     .car-card {
         width: 90%;
@@ -337,7 +343,7 @@ header .services span:hover {
     </div>
 
     <p class="note">!! Professional and Reliable Service !!</p>
-  
+    <p class="trust-note">Professional and Reliable Service You Can Trust / पेशेवर और भरोसेमंद सेवा जिस पर आप विश्वास कर सकते हैं</p>
 </div>
 
 <!-- WhatsApp Floating Icon -->
