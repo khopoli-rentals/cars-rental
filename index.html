@@ -18,7 +18,7 @@ body {
 
 /* HEADER */
 header {
-    margin-bottom: 0;
+    margin-bottom: 0; /* Removed space below header */
 }
 
 header h1 {
@@ -59,41 +59,40 @@ header .tagline {
     text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
 }
 
-/* SERVICES BOX */
+/* SERVICES BOXES */
 header .services {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 10px 0 0 0;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0 0 0;
 }
 
 header .services span {
-    display: inline-block;
-    background: #25D366;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 12px;
+    background: #ffdd59; /* vibrant yellow */
+    color: #000;
     font-weight: bold;
-    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 header .services span:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: #ffc107; /* slightly brighter on hover */
 }
 
-/* CONTACT BOX */
+/* CONTACT - CLICKABLE AND BIGGER */
 .contact {
     font-size: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* reduced space below */
     background: rgba(0,0,0,0.2);
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    text-align: left;
 }
 .contact strong {
     font-size: 28px;
@@ -102,23 +101,20 @@ header .services span:hover {
     color: white;
     text-decoration: none;
 }
-.contact p {
-    margin: 6px 0;
-}
 
 /* VEHICLE INTRO TEXT */
 .vehicle-intro {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px 0; /* moved close to contact box */
     line-height: 1.1;
     color: #000;
 }
 
 .vehicle-intro h2 {
-    font-size: 24px;
-    font-weight: 900;
-    color: #000;
+    font-size: 24px; /* same as header */
+    font-weight: 900; /* same as header */
+    color: #000; /* black */
     margin: 0;
-    text-transform: uppercase;
+    text-transform: uppercase; /* match header style */
 }
 
 .vehicle-intro p {
@@ -284,6 +280,9 @@ header .services span:hover {
         font-size: 14px;
         margin: 0;
     }
+    header .services {
+        gap: 8px;
+    }
     .contact {
         font-size: 18px;
     }
@@ -318,23 +317,18 @@ header .services span:hover {
     <h1>KHOPOLI Cab Rental Services</h1>
     <p class="subtitle">!! विश्वसनीय आणि परवडणारी सेवा !!</p>
     <p class="tagline">Available 24×7 for All Your Travel Needs</p>
-    <div class="services">
-        <span>Airport Transfer</span>
+    <p class="services">
+        <span>Airport Transfers</span>
         <span>Outstation Services</span>
-        <span>One Way Cab Services</span>
+        <span>One Way Services </span>
         <span>Corporate Services</span>
-        <span>Pet Friendly 🐾</span>
-    </div>
+        <span>Pet Friendly🐾 </span>
+    </p>
 </header>
 
 <div class="contact">
     <p>📞 Contact Number: <strong><a href="tel:+917249794759">7249794759</a></strong></p>
     <p>📧 Email: <strong><a href="mailto:khopolicab@gmail.com">khopolicab@gmail.com</a></strong></p>
-    <p style="margin-top:5px;">
-        <a href="https://wa.me/917249794759" target="_blank" style="text-decoration:none; color:white; font-size:24px;">
-            💬 WhatsApp
-        </a>
-    </p>
 </div>
 
 <!-- VEHICLE INTRO TEXT -->
@@ -388,7 +382,8 @@ header .services span:hover {
         </div>
     </div>
 
-    <p class="note">Rated 5⭐ | Serving You Since 20 Years | Professional & Reliable Service</p>
+    <p class="note">!! Your Journey, Our Commitment  !!</p>
+     <p class="note">⭐ Rated 5★ Since 2006 ⭐ </p>
 </div>
 
 <!-- WhatsApp Floating Icon -->
