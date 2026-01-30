@@ -18,13 +18,13 @@ body {
 
 /* HEADER */
 header {
-    margin-bottom: 0; /* Removed space below header */
+    margin-bottom: 0;
 }
 
 header h1 {
     font-size: 24px;
     font-weight: 900;
-    color: #000;
+    color: #FFD700; /* Yellow header */
     background: rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: 20px;
@@ -59,44 +59,54 @@ header .tagline {
     text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
 }
 
-/* SERVICES BOXES */
-header .services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin: 8px 0 0 0;
+header .marathi-tagline {
+    font-size: 18px;
+    color: #000;
+    margin: 2px 0 10px 0;
+    font-weight: 600;
+    text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
 }
 
-header .services span {
-    background: #ffdd59; /* vibrant yellow */
+/* SERVICES BOXES */
+.services-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.services-box span {
+    display: inline-block;
+    background: #FFD700;
     color: #000;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 6px 12px;
     border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+
+.services-box span:hover {
+    transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
-header .services span:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    background: #ffc107; /* slightly brighter on hover */
-}
-
-/* CONTACT - CLICKABLE AND BIGGER */
+/* CONTACT */
 .contact {
     font-size: 24px;
-    margin-bottom: 5px; /* reduced space below */
+    margin-bottom: 5px;
     background: rgba(0,0,0,0.2);
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
+    position: relative;
 }
+
 .contact strong {
     font-size: 28px;
 }
+
 .contact a {
     color: white;
     text-decoration: none;
@@ -104,17 +114,17 @@ header .services span:hover {
 
 /* VEHICLE INTRO TEXT */
 .vehicle-intro {
-    margin: 0 0 20px 0; /* moved close to contact box */
+    margin: 0 0 20px 0;
     line-height: 1.1;
     color: #000;
 }
 
 .vehicle-intro h2 {
-    font-size: 24px; /* same as header */
-    font-weight: 900; /* same as header */
-    color: #000; /* black */
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
     margin: 0;
-    text-transform: uppercase; /* match header style */
+    text-transform: uppercase;
 }
 
 .vehicle-intro p {
@@ -199,9 +209,11 @@ header .services span:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.2);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+.contact .whatsapp-inline {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
 
 /* FOOTER */
@@ -272,42 +284,16 @@ header .services span:hover {
 
 /* RESPONSIVE */
 @media (max-width: 500px) {
-    header h1 {
-        font-size: 18px;
-        padding: 8px 12px;
-    }
-    header .subtitle, header .tagline {
-        font-size: 14px;
-        margin: 0;
-    }
-    header .services {
-        gap: 8px;
-    }
-    .contact {
-        font-size: 18px;
-    }
-    .contact strong {
-        font-size: 20px;
-    }
-    .vehicle-intro h2 {
-        font-size: 18px;
-    }
-    .vehicle-intro p {
-        font-size: 16px;
-    }
-    .car-card {
-        width: 90%;
-    }
-    .footer h2 {
-        font-size: 22px;
-    }
-    .footer .info-card img {
-        width: 50px;
-        height: 50px;
-    }
-    .footer p.note, .footer p.trust-note {
-        font-size: 14px;
-    }
+    header h1 { font-size: 18px; padding: 8px 12px; }
+    header .subtitle, header .tagline, header .marathi-tagline, header .services { font-size: 14px; margin: 0; }
+    .contact { font-size: 18px; }
+    .contact strong { font-size: 20px; }
+    .vehicle-intro h2 { font-size: 18px; }
+    .vehicle-intro p { font-size: 16px; }
+    .car-card { width: 90%; }
+    .footer h2 { font-size: 22px; }
+    .footer .info-card img { width: 50px; height: 50px; }
+    .footer p.note, .footer p.trust-note { font-size: 14px; }
 }
 </style>
 </head>
@@ -317,18 +303,20 @@ header .services span:hover {
     <h1>KHOPOLI Cab Rental Services</h1>
     <p class="subtitle">!! विश्वसनीय आणि परवडणारी सेवा !!</p>
     <p class="tagline">Available 24×7 for All Your Travel Needs</p>
-    <p class="services">
-        <span>Airport Transfers</span>
-        <span>Outstation Services</span>
-        <span>One Way Services </span>
-        <span>Corporate Services</span>
-        <span>Pet Friendly🐾 </span>
-    </p>
+    <p class="marathi-tagline">तुमचा प्रवास, आमची वचनबद्धता</p>
+    <div class="services-box">
+        <span>✈ Airport Transfer</span>
+        <span>🛣 Outstation Services</span>
+        <span>🚕 One Way</span>
+        <span>🏢 Corporate Services</span>
+        <span>🐾 Pet Friendly</span>
+    </div>
 </header>
 
 <div class="contact">
     <p>📞 Contact Number: <strong><a href="tel:+917249794759">7249794759</a></strong></p>
     <p>📧 Email: <strong><a href="mailto:khopolicab@gmail.com">khopolicab@gmail.com</a></strong></p>
+    <a href="https://wa.me/917249794759" target="_blank" class="whatsapp-inline">💬</a>
 </div>
 
 <!-- VEHICLE INTRO TEXT -->
@@ -382,11 +370,10 @@ header .services span:hover {
         </div>
     </div>
 
-    <p class="note">!! Your Journey, Our Commitment  !!</p>
-     <p class="note">⭐ Rated 5★ Since 2006 ⭐ </p>
+    <p class="note">Rated 5⭐️ | Serving You Since 20 Years | !! Professional and Reliable Service !!</p>
 </div>
 
-<!-- WhatsApp Floating Icon -->
+<!-- Floating WhatsApp -->
 <a href="https://wa.me/917249794759" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
