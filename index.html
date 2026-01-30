@@ -106,16 +106,22 @@ header .services span:hover {
 .vehicle-intro {
     margin: 30px 0 20px 0;
     line-height: 1.1;
+    display: inline-block;
+    background: rgba(0,0,0,0.3); /* black box */
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
 }
 
 .vehicle-intro h2,
 .vehicle-intro p {
-    color: #000;
+    color: #fff;
     margin: 0;
 }
 
 .vehicle-intro h2 {
-    font-size: 26px;
+    font-size: 24px; /* same as header */
+    font-weight: 900;
 }
 
 .vehicle-intro p {
@@ -285,6 +291,12 @@ header .services span:hover {
     }
     .contact strong {
         font-size: 20px;
+    }
+    .vehicle-intro h2 {
+        font-size: 18px;
+    }
+    .vehicle-intro p {
+        font-size: 16px;
     }
     .car-card {
         width: 90%;
