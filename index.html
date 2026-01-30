@@ -59,26 +59,30 @@ header .tagline {
     text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
 }
 
+/* SERVICES BOXES */
 header .services {
-    font-size: 18px;
-    margin: 5px 0 0 0;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0 0 0;
 }
 
 header .services span {
-    display: block;
+    background: #ffdd59; /* vibrant yellow */
     color: #000;
     font-weight: bold;
-    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
-    cursor: default;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 header .services span:hover {
-    color: #444;
-    transform: translateX(6px);
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: #ffc107; /* slightly brighter on hover */
 }
 
 /* CONTACT - CLICKABLE AND BIGGER */
@@ -272,9 +276,12 @@ header .services span:hover {
         font-size: 18px;
         padding: 8px 12px;
     }
-    header .subtitle, header .tagline, header .services {
+    header .subtitle, header .tagline {
         font-size: 14px;
         margin: 0;
+    }
+    header .services {
+        gap: 8px;
     }
     .contact {
         font-size: 18px;
@@ -313,8 +320,9 @@ header .services span:hover {
     <p class="services">
         <span>Airport Transfer</span>
         <span>Outstation Services</span>
-        <span>One Way Cab Services</span>
+        <span>One Way</span>
         <span>Corporate Services</span>
+        <span>Pet Friendly</span>
     </p>
 </header>
 
