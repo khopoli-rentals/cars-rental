@@ -6,101 +6,105 @@
 <title>Khopoli Cab Rental Services</title>
 
 <style>
-/* GENERAL STYLES */
+/* ================= GENERAL STYLES ================= */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    padding: 0;
+    background: linear-gradient(160deg, #6dd5ed, #2193b0);
     color: #fff;
+    text-align: center;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
-    margin-bottom: 0; /* Removed space below header */
+    padding: 20px 0 10px 0;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 900;
     color: #000;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-align: center;
-    white-space: nowrap;
-    overflow-x: auto;
-    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0;
+    display: inline-block;
+    position: relative;
 }
 
-header h1:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+header h1::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #25D366;
+    margin: 6px auto 0;
+    border-radius: 2px;
 }
 
 header .subtitle {
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
     margin: 5px 0 0 0;
     font-style: italic;
-    text-shadow: 1px 1px 6px rgba(255,255,255,0.2);
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.1);
 }
 
 header .tagline {
-    font-size: 18px;
+    font-size: 16px;
     color: #000;
     margin: 2px 0 0 0;
     font-weight: 600;
-    text-shadow: 1px 1px 6px rgba(255,255,255,0.15);
 }
 
 header .services {
-    font-size: 18px;
+    font-size: 16px;
     margin: 5px 0 0 0;
-    font-style: normal;
     font-weight: 600;
-    line-height: 1.8;
 }
 
 header .services span {
-    display: block;
-    color: #000;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
-    cursor: default;
+    display: inline-block;
+    margin: 0 8px;
+    color: #fff;
+    padding: 4px 8px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 header .services span:hover {
-    color: #444;
-    transform: translateX(6px);
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    background: #25D366;
+    color: #000;
+    transform: translateY(-3px);
 }
 
-/* CONTACT - CLICKABLE AND BIGGER */
+/* ================= CONTACT ================= */
 .contact {
-    font-size: 24px;
-    margin-bottom: 5px; /* reduced space below */
-    background: rgba(0,0,0,0.2);
-    padding: 20px;
-    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px 0 0 0;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.25);
     display: inline-block;
-}
-.contact strong {
-    font-size: 28px;
-}
-.contact a {
-    color: white;
-    text-decoration: none;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* VEHICLE INTRO TEXT */
+.contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+.contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= VEHICLE INTRO ================= */
 .vehicle-intro {
-    margin: 0 0 20px 0; /* removed top margin to move close to contact box */
+    margin: 15px 0 20px 0;
     line-height: 1.1;
     color: #000;
 }
@@ -108,43 +112,47 @@ header .services span:hover {
 .vehicle-intro h2 {
     font-size: 24px;
     font-weight: 900;
+    color: #000;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .vehicle-intro p {
-    font-size: 18px;
-    margin: 0;
+    font-size: 16px;
+    margin: 2px 0 0 0;
+    font-weight: 500;
 }
 
-/* CAR CARDS */
+/* ================= CAR CARDS ================= */
 .cars {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-bottom: 40px;
 }
 
 .car-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
     border-radius: 15px;
-    padding: 15px;
-    max-width: 320px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 10px;
+    max-width: 300px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
 
 .car-card:hover {
     transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }
 
 .car-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .car-card:hover img {
@@ -154,22 +162,21 @@ header .services span:hover {
 .car-card p {
     margin: 10px 0 0 0;
     font-size: 16px;
-    color: #fff;
     font-weight: bold;
 }
 
-/* BOOK NOW BUTTON */
+/* BOOK BUTTON */
 .book-btn {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     background: #25D366;
+    color: #000;
+    font-weight: bold;
     padding: 8px 16px;
-    color: #fff;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    transition: all 0.3s ease;
     opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
 }
 
 .car-card:hover .book-btn {
@@ -177,7 +184,56 @@ header .services span:hover {
     transform: translateY(-4px);
 }
 
-/* WHATSAPP FLOATING BUTTON */
+/* ================= FOOTER ================= */
+.footer {
+    margin-top: 40px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 35px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer .info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.footer .info-card a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer .info-card a:hover {
+    transform: translateY(-6px) scale(1.05);
+}
+
+.footer .info-card img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer .info-card a:hover img {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.footer p.note {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -188,117 +244,25 @@ header .services span:hover {
     padding: 16px;
     font-size: 26px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    z-index: 999;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.2);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
-/* FOOTER */
-.footer {
-    margin-top: 50px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 25px;
-    padding: 40px 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    backdrop-filter: blur(10px);
-}
-
-.footer h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
-}
-
-.footer .info-cards {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.footer .info-card a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.footer .info-card a:hover {
-    transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-.footer .info-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 12px;
-    transition: transform 0.3s;
-}
-
-.footer .info-card a:hover img {
-    transform: rotate(15deg) scale(1.1);
-}
-
-.footer p {
-    font-size: 16px;
-    margin: 0;
-}
-
-.footer p.note {
-    font-size: 18px;
-    margin-top: 25px;
-    font-weight: bold;
-    color: #f0f0f0;
-}
-
-.footer p.trust-note {
-    font-size: 16px;
-    margin-top: 15px;
-    color: #f0f0f0;
-    font-style: italic;
-    font-weight: 600;
-}
-
-/* RESPONSIVE */
-@media (max-width: 500px) {
-    header h1 {
-        font-size: 18px;
-        padding: 8px 12px;
-    }
-    header .subtitle, header .tagline, header .services {
-        font-size: 14px;
-        margin: 0;
-    }
-    .contact {
-        font-size: 18px;
-    }
-    .contact strong {
-        font-size: 20px;
-    }
-    .vehicle-intro h2 {
-        font-size: 18px;
-    }
-    .vehicle-intro p {
-        font-size: 16px;
-    }
-    .car-card {
-        width: 90%;
-    }
-    .footer h2 {
-        font-size: 22px;
-    }
-    .footer .info-card img {
-        width: 50px;
-        height: 50px;
-    }
-    .footer p.note, .footer p.trust-note {
-        font-size: 14px;
-    }
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    header h1 { font-size: 20px; }
+    header .subtitle, header .tagline { font-size: 14px; }
+    .contact { font-size: 18px; padding: 10px 15px; }
+    .vehicle-intro h2 { font-size: 20px; }
+    .vehicle-intro p { font-size: 14px; }
+    .car-card { width: 90%; }
+    .footer h2 { font-size: 20px; }
+    .footer .info-card img { width: 45px; height: 45px; }
 }
 </style>
 </head>
@@ -317,11 +281,10 @@ header .services span:hover {
 </header>
 
 <div class="contact">
-    <p>📞 Contact Number: <strong><a href="tel:+917249794759">7249794759</a></strong></p>
-    <p>📧 Email: <strong><a href="mailto:khopolicab@gmail.com">khopolicab@gmail.com</a></strong></p>
+    <p>📞 <a href="tel:+917249794759">7249794759</a></p>
+    <p>📧 <a href="mailto:khopolicab@gmail.com">khopolicab@gmail.com</a></p>
 </div>
 
-<!-- VEHICLE INTRO TEXT -->
 <div class="vehicle-intro">
     <h2>Wide Range Of Vehicles</h2>
     <p>Based on your requirements</p>
@@ -333,13 +296,11 @@ header .services span:hover {
         <p>Ertiga (SUV)</p>
         <a href="https://wa.me/917249794759?text=Hi%20I%20want%20to%20book%20Ertiga" class="book-btn">Book Now</a>
     </div>
-
     <div class="car-card">
         <img src="images/dzire.jpg" alt="Maruti Dzire">
         <p>Swift Dzire (Sedan)</p>
         <a href="https://wa.me/917249794759?text=Hi%20I%20want%20to%20book%20Dzire" class="book-btn">Book Now</a>
     </div>
-
     <div class="car-card">
         <img src="images/wagonr.jpg" alt="Maruti WagonR">
         <p>WagonR (Hatchback)</p>
@@ -347,10 +308,8 @@ header .services span:hover {
     </div>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
     <h2>Khopoli Cab Services Available 24×7</h2>
-
     <div class="info-cards">
         <div class="info-card">
             <a href="tel:+917249794759">
@@ -371,11 +330,9 @@ header .services span:hover {
             </a>
         </div>
     </div>
-
     <p class="note">!! Professional and Reliable Service !!</p>
 </div>
 
-<!-- WhatsApp Floating Icon -->
 <a href="https://wa.me/917249794759" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
