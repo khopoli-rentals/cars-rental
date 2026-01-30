@@ -24,33 +24,47 @@ header {
 header h1 {
     font-size: 42px;
     font-weight: bold;
-    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
 header .subtitle {
     font-size: 18px;
-    color: #f0f0f0;
+    color: #fdf5e6;
     margin-top: 6px;
     font-style: italic;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
 }
 
 header .tagline {
     font-size: 16px;
-    color: #e0e0e0;
+    color: #ffe4b5;
     margin-top: 4px;
     font-style: normal;
     font-weight: 500;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
 }
 
 header .services {
     font-size: 15px;
-    color: #dcdcdc;
+    color: #ffe4c4;
     margin-top: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.8;
+}
+
+header .services span {
+    display: block;
+    transition: color 0.3s, transform 0.3s;
+    cursor: default;
+}
+
+header .services span:hover {
+    color: #fff;
+    transform: translateX(6px);
 }
 
 /* CONTACT */
@@ -237,10 +251,10 @@ header .services {
     <p class="subtitle">विश्वसनीय आणि परवडणारी सेवा</p>
     <p class="tagline">Available 24×7 for All Your Travel Needs</p>
     <p class="services">
-        Airport Transfer<br>
-        Outstation Services<br>
-        One Way Cab Services<br>
-        Corporate Services
+        <span>Airport Transfer</span>
+        <span>Outstation Services</span>
+        <span>One Way Cab Services</span>
+        <span>Corporate Services</span>
     </p>
 </header>
 
@@ -288,17 +302,4 @@ header .services {
         </div>
         <div class="info-card">
             <a href="https://wa.me/917249794759" target="_blank">
-                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
-                <p>WhatsApp</p>
-            </a>
-        </div>
-    </div>
-
-    <p class="note">विश्वसनीय स्थानीय सेवा</p>
-</div>
-
-<!-- WhatsApp Floating Icon -->
-<a href="https://wa.me/917249794759" target="_blank" class="whatsapp-float">💬</a>
-
-</body>
-</html>
+                <img src="https://img.icons8.com/ios-fille
