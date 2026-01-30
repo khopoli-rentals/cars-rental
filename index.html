@@ -21,7 +21,7 @@ header {
     margin-bottom: 30px;
 }
 
-/* BOXED TOP LINE - SMALL & RESPONSIVE */
+/* BOXED TOP LINE - SMALL & RESPONSIVE WITH GLOW */
 header h1 {
     font-size: 24px;
     font-weight: 900;
@@ -29,7 +29,7 @@ header h1 {
     background: rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
     border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 15px rgba(255, 255, 255, 0.6);
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -37,11 +37,25 @@ header h1 {
     white-space: nowrap;
     overflow-x: auto;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: glowPulse 2s infinite alternate;
 }
 
 header h1:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6), 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+/* GLOW ANIMATION */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 10px rgba(255,255,255,0.4);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 20px rgba(255,255,255,0.7);
+    }
+    100% {
+        box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 15px rgba(255,255,255,0.6);
+    }
 }
 
 /* SUBTITLE & TAGLINE */
@@ -87,7 +101,7 @@ header .services span:hover {
 
 /* CONTACT - CLICKABLE AND BIGGER */
 .contact {
-    font-size: 24px; /* bigger base font */
+    font-size: 24px; 
     margin-bottom: 20px;
     background: rgba(0,0,0,0.2);
     padding: 20px;
@@ -95,11 +109,30 @@ header .services span:hover {
     display: inline-block;
 }
 .contact strong {
-    font-size: 28px; /* actual number/email bigger */
+    font-size: 28px;
 }
 .contact a {
     color: white;
     text-decoration: none;
+}
+
+/* VEHICLE INTRO SECTION */
+.vehicle-intro {
+    margin: 30px 0 20px 0;
+}
+
+.vehicle-intro h2 {
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: 8px;
+}
+
+.vehicle-intro p {
+    font-size: 18px;
+    color: #f0f0f0;
+    font-style: italic;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
 }
 
 /* CAR CARDS */
@@ -300,6 +333,13 @@ header .services span:hover {
     <p>📧 Email: <strong><a href="mailto:khopolicab@gmail.com">khopolicab@gmail.com</a></strong></p>
 </div>
 
+<!-- VEHICLE INTRO -->
+<div class="vehicle-intro">
+    <h2>Wide Range Of Vehicles</h2>
+    <p>Based on your requirements</p>
+</div>
+
+<!-- CAR CARDS -->
 <div class="cars">
     <div class="car-card">
         <img src="images/ertiga.jpg" alt="Maruti Ertiga">
@@ -315,7 +355,7 @@ header .services span:hover {
 
     <div class="car-card">
         <img src="images/wagonr.jpg" alt="Maruti WagonR">
-        <p>WagonR(Hatchback)</p>
+        <p>WagonR (Hatchback)</p>
         <a href="https://wa.me/917249794759?text=Hi%20I%20want%20to%20book%20WagonR" class="book-btn">Book Now</a>
     </div>
 </div>
@@ -346,7 +386,6 @@ header .services span:hover {
     </div>
 
     <p class="note">!! Professional and Reliable Service !!</p>
-   
 </div>
 
 <!-- WhatsApp Floating Icon -->
